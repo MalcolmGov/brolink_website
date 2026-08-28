@@ -1,191 +1,121 @@
 import React from 'react';
-import { Building2, ShieldCheck } from 'lucide-react';
+import { Building2, CheckCircle2 } from 'lucide-react';
 
-/* ─── Authentic inline SVG logos ─────────────────────────────────────────── */
+/* ─── Inline SVG logos — designed to render on WHITE backgrounds ─────────── */
 
 const AbsaLogo = () => (
-  <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 96, height: 38 }}>
-    <circle cx="24" cy="24" r="20" stroke="#DC0032" strokeWidth="3" fill="none"/>
-    <text x="24" y="29" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="12" fill="#DC0032">absa</text>
-    <text x="72" y="20" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="18" fill="#DC0032">ABSA</text>
-    <text x="72" y="34" fontFamily="Arial, sans-serif" fontWeight="500" fontSize="9" fill="#6b7280">INSURANCE</text>
+  <svg viewBox="0 0 120 52" xmlns="http://www.w3.org/2000/svg" style={{ width: 100, height: 44 }}>
+    <circle cx="26" cy="26" r="22" stroke="#DC0032" strokeWidth="3.5" fill="none"/>
+    <text x="26" y="31" textAnchor="middle" fontFamily="Arial,sans-serif" fontWeight="800" fontSize="13" fill="#DC0032">absa</text>
+    <text x="58" y="22" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="19" fill="#DC0032">ABSA</text>
+    <text x="58" y="36" fontFamily="Arial,sans-serif" fontWeight="500" fontSize="9.5" fill="#9ca3af" letterSpacing="0.5">INSURANCE</text>
   </svg>
 );
 
 const HollardLogo = () => (
-  <svg viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 110, height: 36 }}>
-    <text x="0" y="30" fontFamily="Georgia, serif" fontWeight="700" fontSize="26" fill="#2d2d6e">Hollard</text>
-    <circle cx="117" cy="20" r="6" fill="#E8001C"/>
+  <svg viewBox="0 0 130 44" xmlns="http://www.w3.org/2000/svg" style={{ width: 115, height: 40 }}>
+    <text x="0" y="34" fontFamily="Georgia,serif" fontWeight="700" fontSize="28" fill="#1e1464">Hollard</text>
+    <circle cx="121" cy="22" r="7" fill="#E8001C"/>
   </svg>
 );
 
 const OldMutualLogo = () => (
-  <svg viewBox="0 0 140 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 120, height: 42 }}>
-    {/* OM leaf icon */}
-    <circle cx="18" cy="24" r="14" fill="#00843D"/>
-    <path d="M11 24 Q18 12 25 24 Q18 36 11 24Z" fill="#FFD700"/>
-    <text x="36" y="20" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="11" fill="#00843D">OLD MUTUAL</text>
-    <text x="36" y="34" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="10" fill="#00843D">INSURE</text>
+  <svg viewBox="0 0 150 52" xmlns="http://www.w3.org/2000/svg" style={{ width: 130, height: 46 }}>
+    <circle cx="20" cy="26" r="16" fill="#00843D"/>
+    <ellipse cx="20" cy="26" rx="7" ry="14" fill="#FFD700"/>
+    <ellipse cx="20" cy="26" rx="14" ry="7" fill="#00843D" opacity="0.5"/>
+    <text x="44" y="22" fontFamily="Arial,sans-serif" fontWeight="800" fontSize="12" fill="#00843D" letterSpacing="0.3">OLD MUTUAL</text>
+    <text x="44" y="37" fontFamily="Arial,sans-serif" fontWeight="700" fontSize="12" fill="#00843D" letterSpacing="0.3">INSURE</text>
   </svg>
 );
 
 const SantamLogo = () => (
-  <svg viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 110, height: 36 }}>
-    {/* Santam arc */}
-    <path d="M8 28 Q30 8 52 28" stroke="#009FDB" strokeWidth="4" fill="none" strokeLinecap="round"/>
-    <text x="0" y="38" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="22" fill="#003087">santam</text>
+  <svg viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{ width: 110, height: 40 }}>
+    <path d="M4 30 Q30 6 56 30" stroke="#009FDB" strokeWidth="5" fill="none" strokeLinecap="round"/>
+    <text x="0" y="42" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="22" fill="#003087">santam</text>
   </svg>
 );
 
 const NedbankLogo = () => (
-  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 44, height: 44 }}>
-    <rect width="48" height="48" rx="8" fill="#007B3E"/>
-    <text x="24" y="32" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="900" fontSize="22" fill="white">N</text>
+  <svg viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg" style={{ width: 105, height: 44 }}>
+    <rect x="0" y="4" width="42" height="42" rx="8" fill="#007B3E"/>
+    <text x="21" y="33" textAnchor="middle" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="24" fill="white">N</text>
+    <text x="50" y="22" fontFamily="Arial,sans-serif" fontWeight="800" fontSize="13" fill="#007B3E">Nedbank</text>
+    <text x="50" y="37" fontFamily="Arial,sans-serif" fontWeight="500" fontSize="10" fill="#6b7280">Insurance</text>
   </svg>
 );
 
 const AonLogo = () => (
-  <svg viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 80, height: 36 }}>
-    <text x="0" y="34" fontFamily="Arial, sans-serif" fontWeight="900" fontSize="36" fill="#E4002B" letterSpacing="-1">Aon</text>
+  <svg viewBox="0 0 90 44" xmlns="http://www.w3.org/2000/svg" style={{ width: 80, height: 40 }}>
+    <text x="0" y="38" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="40" fill="#E4002B" letterSpacing="-1">Aon</text>
   </svg>
 );
 
 const CtrlLogo = () => (
-  <svg viewBox="0 0 110 44" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 90, height: 38 }}>
-    <rect x="0" y="4" width="36" height="36" rx="8" fill="none" stroke="#0066CC" strokeWidth="2.5"/>
-    <text x="18" y="28" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="13" fill="#0066CC">ctrl.</text>
-    <text x="44" y="30" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="18" fill="#0f172a">ctrl.</text>
+  <svg viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg" style={{ width: 105, height: 44 }}>
+    <rect x="1" y="6" width="38" height="38" rx="10" fill="none" stroke="#0066CC" strokeWidth="3"/>
+    <text x="20" y="31" textAnchor="middle" fontFamily="Arial,sans-serif" fontWeight="700" fontSize="12" fill="#0066CC">ctrl.</text>
+    <text x="48" y="34" fontFamily="Arial,sans-serif" fontWeight="700" fontSize="22" fill="#0066CC">ctrl.</text>
   </svg>
 );
 
 const IndweLogo = () => (
-  <svg viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 120, height: 38 }}>
-    <text x="0" y="26" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="18" fill="#1e3a5f">INDWE</text>
-    <text x="0" y="40" fontFamily="Arial, sans-serif" fontWeight="500" fontSize="10" fill="#6b7280" letterSpacing="1">RISK SERVICES</text>
+  <svg viewBox="0 0 140 48" xmlns="http://www.w3.org/2000/svg" style={{ width: 120, height: 42 }}>
+    <text x="0" y="28" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="20" fill="#1e3a5f" letterSpacing="1">INDWE</text>
+    <text x="2" y="43" fontFamily="Arial,sans-serif" fontWeight="500" fontSize="10" fill="#6b7280" letterSpacing="2">RISK SERVICES</text>
   </svg>
 );
 
 const PpsLogo = () => (
-  <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 64, height: 56 }}>
-    <circle cx="50" cy="28" r="26" stroke="#1e3a5f" strokeWidth="2.5" fill="none"/>
-    <circle cx="50" cy="28" r="20" stroke="#1e3a5f" strokeWidth="1.5" fill="none"/>
-    <text x="50" y="33" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="13" fill="#1e3a5f">PPS</text>
-    <text x="50" y="56" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="500" fontSize="7" fill="#6b7280">FOR PROFESSIONALS</text>
+  <svg viewBox="0 0 110 60" xmlns="http://www.w3.org/2000/svg" style={{ width: 90, height: 52 }}>
+    <circle cx="55" cy="26" r="24" stroke="#1e3a5f" strokeWidth="2.5" fill="none"/>
+    <circle cx="55" cy="26" r="16" stroke="#1e3a5f" strokeWidth="1.5" fill="none"/>
+    <text x="55" y="32" textAnchor="middle" fontFamily="Arial,sans-serif" fontWeight="800" fontSize="14" fill="#1e3a5f">PPS</text>
+    <text x="55" y="56" textAnchor="middle" fontFamily="Arial,sans-serif" fontWeight="500" fontSize="7.5" fill="#6b7280" letterSpacing="0.5">FOR PROFESSIONALS</text>
   </svg>
 );
 
 const BryteLogo = () => (
-  <svg viewBox="0 0 130 44" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 110, height: 38 }}>
-    {/* Bryte asterisk/snowflake icon */}
+  <svg viewBox="0 0 120 44" xmlns="http://www.w3.org/2000/svg" style={{ width: 105, height: 40 }}>
     <g transform="translate(14,22)">
       {[0,60,120,180,240,300].map(angle => (
         <line key={angle}
-          x1="0" y1="0"
-          x2={Math.cos(angle * Math.PI / 180) * 11}
-          y2={Math.sin(angle * Math.PI / 180) * 11}
-          stroke="#FF6B00" strokeWidth="2.5" strokeLinecap="round"
+          x1={Math.cos((angle-90)*Math.PI/180)*4}
+          y1={Math.sin((angle-90)*Math.PI/180)*4}
+          x2={Math.cos((angle-90)*Math.PI/180)*13}
+          y2={Math.sin((angle-90)*Math.PI/180)*13}
+          stroke="#FF6B00" strokeWidth="3" strokeLinecap="round"
         />
       ))}
-      <circle cx="0" cy="0" r="3" fill="#FF6B00"/>
+      <circle cx="0" cy="0" r="4" fill="#FF6B00"/>
     </g>
-    <text x="32" y="30" fontFamily="Arial, sans-serif" fontWeight="800" fontSize="22" fill="#1e3a5f">Bryte</text>
+    <text x="34" y="31" fontFamily="Arial,sans-serif" fontWeight="800" fontSize="24" fill="#1e3a5f">Bryte</text>
   </svg>
 );
 
 /* ─── Partner data ────────────────────────────────────────────────────────── */
-const partners = [
-  {
-    name: 'ABSA Insurance',
-    category: 'insurer',
-    badge: 'Bank Insurer',
-    Logo: AbsaLogo,
-    bgLight: 'rgba(220,0,50,0.06)',
-    borderLight: 'rgba(220,0,50,0.15)',
-  },
-  {
-    name: 'Hollard',
-    category: 'insurer',
-    badge: 'Binder Partner',
-    Logo: HollardLogo,
-    bgLight: 'rgba(45,45,110,0.06)',
-    borderLight: 'rgba(45,45,110,0.15)',
-  },
-  {
-    name: 'Old Mutual Insure',
-    category: 'insurer',
-    badge: 'Binder Partner',
-    Logo: OldMutualLogo,
-    bgLight: 'rgba(0,132,61,0.06)',
-    borderLight: 'rgba(0,132,61,0.15)',
-  },
-  {
-    name: 'Santam',
-    category: 'insurer',
-    badge: 'Primary Insurer',
-    Logo: SantamLogo,
-    bgLight: 'rgba(0,48,135,0.06)',
-    borderLight: 'rgba(0,48,135,0.15)',
-  },
-  {
-    name: 'Nedbank Insurance',
-    category: 'insurer',
-    badge: 'Bank Partner',
-    Logo: NedbankLogo,
-    bgLight: 'rgba(0,123,62,0.06)',
-    borderLight: 'rgba(0,123,62,0.15)',
-  },
-  {
-    name: 'AON South Africa',
-    category: 'broker',
-    badge: 'Enterprise Brokerage',
-    Logo: AonLogo,
-    bgLight: 'rgba(228,0,43,0.06)',
-    borderLight: 'rgba(228,0,43,0.15)',
-  },
-  {
-    name: 'CTRL Digital Insurance',
-    category: 'broker',
-    badge: 'InsurTech Partner',
-    Logo: CtrlLogo,
-    bgLight: 'rgba(0,102,204,0.06)',
-    borderLight: 'rgba(0,102,204,0.15)',
-  },
-  {
-    name: 'Indwe Risk Services',
-    category: 'broker',
-    badge: 'Major Broker Group',
-    Logo: IndweLogo,
-    bgLight: 'rgba(30,58,95,0.06)',
-    borderLight: 'rgba(30,58,95,0.15)',
-  },
-  {
-    name: 'PPS Short-Term',
-    category: 'insurer',
-    badge: 'Graduate Specialist',
-    Logo: PpsLogo,
-    bgLight: 'rgba(30,58,95,0.06)',
-    borderLight: 'rgba(30,58,95,0.15)',
-  },
-  {
-    name: 'Bryte Insurance',
-    category: 'insurer',
-    badge: 'Specialist Underwriter',
-    Logo: BryteLogo,
-    bgLight: 'rgba(255,107,0,0.06)',
-    borderLight: 'rgba(255,107,0,0.15)',
-  },
+const PARTNERS = [
+  { name: 'ABSA Insurance',        category: 'insurer', badge: 'Bank Insurer',          Logo: AbsaLogo      },
+  { name: 'Hollard',               category: 'insurer', badge: 'Binder Partner',        Logo: HollardLogo   },
+  { name: 'Old Mutual Insure',     category: 'insurer', badge: 'Binder Partner',        Logo: OldMutualLogo },
+  { name: 'Santam',                category: 'insurer', badge: 'Primary Insurer',       Logo: SantamLogo    },
+  { name: 'Nedbank Insurance',     category: 'insurer', badge: 'Bank Partner',          Logo: NedbankLogo   },
+  { name: 'AON South Africa',      category: 'broker',  badge: 'Enterprise Brokerage',  Logo: AonLogo       },
+  { name: 'CTRL Digital',          category: 'broker',  badge: 'InsurTech Partner',     Logo: CtrlLogo      },
+  { name: 'Indwe Risk Services',   category: 'broker',  badge: 'Major Broker Group',    Logo: IndweLogo     },
+  { name: 'PPS Short-Term',        category: 'insurer', badge: 'Graduate Specialist',   Logo: PpsLogo       },
+  { name: 'Bryte Insurance',       category: 'insurer', badge: 'Specialist Underwriter',Logo: BryteLogo     },
 ];
 
-/* ─── Component ──────────────────────────────────────────────────────────── */
 export const PartnersGrid: React.FC = () => {
-  const [filter, setFilter] = React.useState<'all' | 'insurer' | 'broker'>('all');
-  const filtered = filter === 'all' ? partners : partners.filter(p => p.category === filter);
+  const [filter, setFilter] = React.useState<'all'|'insurer'|'broker'>('all');
+  const filtered = filter === 'all' ? PARTNERS : PARTNERS.filter(p => p.category === filter);
 
   return (
-    <section id="partners" style={{ padding: '100px 0', background: 'var(--bg-primary)' }}>
+    <section id="partners" style={{ padding: '100px 0' }}>
       <div className="container">
 
-        {/* Section header */}
+        {/* Header */}
         <div className="section-header">
           <div className="badge-pill">
             <Building2 style={{ width: 16, height: 16, color: '#20a3b6' }} />
@@ -195,32 +125,30 @@ export const PartnersGrid: React.FC = () => {
             Our Valued <span className="text-gradient">Insurers &amp; Partners</span>
           </h2>
           <p className="section-subtitle">
-            Brolink works seamlessly with South Africa's most respected short-term insurers,
-            financial institutions, and broker advisory networks — all integrated into Websure™.
+            Brolink works with South Africa's most respected insurers, financial institutions,
+            and broker networks — all Websure™ integrated.
           </p>
         </div>
 
-        {/* Filter tabs */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '56px', flexWrap: 'wrap' }}>
-          {(['all', 'insurer', 'broker'] as const).map(cat => (
+        {/* Filter pills */}
+        <div style={{ display:'flex', justifyContent:'center', gap:'12px', marginBottom:'52px', flexWrap:'wrap' }}>
+          {(['all','insurer','broker'] as const).map(cat => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
               style={{
-                padding: '10px 28px',
+                padding: '10px 26px',
                 borderRadius: '9999px',
-                fontSize: '0.9rem',
+                fontSize: '0.875rem',
                 fontWeight: 700,
-                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                fontFamily: "'Plus Jakarta Sans',sans-serif",
                 cursor: 'pointer',
                 border: '1px solid',
                 borderColor: filter === cat ? 'transparent' : 'var(--border-color)',
-                background: filter === cat
-                  ? 'linear-gradient(135deg, #20a3b6 0%, #0077b6 100%)'
-                  : 'var(--bg-surface)',
+                background: filter === cat ? 'linear-gradient(135deg,#20a3b6 0%,#0077b6 100%)' : 'var(--bg-surface)',
                 color: filter === cat ? '#ffffff' : 'var(--text-secondary)',
-                boxShadow: filter === cat ? '0 6px 20px rgba(32,163,182,0.4)' : 'none',
-                transition: 'all 0.25s ease',
+                boxShadow: filter === cat ? '0 6px 20px rgba(32,163,182,0.35)' : 'none',
+                transition: 'all 0.2s ease',
               }}
             >
               {cat === 'all' ? 'All Partners' : cat === 'insurer' ? 'Insurers' : 'Brokerages & Tech'}
@@ -228,134 +156,122 @@ export const PartnersGrid: React.FC = () => {
           ))}
         </div>
 
-        {/* Logo grid */}
+        {/* Logo cards — white bg so all brand colours pop */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(5, 1fr)',
-          gap: '20px',
+          gap: '16px',
         }}>
-          {filtered.map((partner) => {
-            const { Logo } = partner;
-            return (
-              <div
-                key={partner.name}
-                style={{
-                  position: 'relative',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '16px',
-                  padding: '32px 24px 24px',
-                  borderRadius: '20px',
-                  background: 'var(--bg-surface)',
-                  border: '1px solid var(--border-color)',
-                  cursor: 'default',
-                  transition: 'all 0.3s ease',
-                  minHeight: '140px',
-                  overflow: 'hidden',
-                }}
-                onMouseEnter={e => {
-                  const el = e.currentTarget as HTMLDivElement;
-                  el.style.borderColor = 'var(--border-glow)';
-                  el.style.background = 'var(--bg-card)';
-                  el.style.transform = 'translateY(-4px)';
-                  el.style.boxShadow = '0 16px 40px rgba(0,0,0,0.25)';
-                }}
-                onMouseLeave={e => {
-                  const el = e.currentTarget as HTMLDivElement;
-                  el.style.borderColor = 'var(--border-color)';
-                  el.style.background = 'var(--bg-surface)';
-                  el.style.transform = 'translateY(0)';
-                  el.style.boxShadow = 'none';
-                }}
-              >
-                {/* Category badge — top right */}
-                <span style={{
-                  position: 'absolute',
-                  top: '12px',
-                  right: '12px',
-                  fontSize: '9px',
-                  fontWeight: 800,
-                  padding: '3px 8px',
-                  borderRadius: '4px',
-                  background: 'var(--badge-bg)',
-                  color: 'var(--accent)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  whiteSpace: 'nowrap',
-                }}>
-                  {partner.badge}
-                </span>
+          {filtered.map(({ name, badge, Logo }) => (
+            <div
+              key={name}
+              style={{
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '20px 16px 14px',
+                borderRadius: '16px',
+                /* White card — logos always readable */
+                background: '#ffffff',
+                border: '1px solid #e2e8f0',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+                transition: 'all 0.25s ease',
+                minHeight: '110px',
+                overflow: 'hidden',
+              }}
+              onMouseEnter={e => {
+                const el = e.currentTarget as HTMLDivElement;
+                el.style.transform = 'translateY(-4px)';
+                el.style.boxShadow = '0 12px 32px rgba(0,0,0,0.14)';
+                el.style.borderColor = '#20a3b6';
+              }}
+              onMouseLeave={e => {
+                const el = e.currentTarget as HTMLDivElement;
+                el.style.transform = 'translateY(0)';
+                el.style.boxShadow = '0 2px 8px rgba(0,0,0,0.06)';
+                el.style.borderColor = '#e2e8f0';
+              }}
+            >
+              {/* Category badge */}
+              <span style={{
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                fontSize: '8px',
+                fontWeight: 800,
+                padding: '2px 7px',
+                borderRadius: '4px',
+                background: 'rgba(32,163,182,0.1)',
+                color: '#0e7490',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                whiteSpace: 'nowrap',
+              }}>
+                {badge}
+              </span>
 
-                {/* Logo */}
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flex: 1,
-                  width: '100%',
-                }}>
-                  <Logo />
-                </div>
-
-                {/* Name + verified */}
-                <div style={{
-                  width: '100%',
-                  paddingTop: '12px',
-                  borderTop: '1px solid var(--border-color)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                }}>
-                  <span style={{
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    color: 'var(--text-secondary)',
-                  }}>
-                    {partner.name}
-                  </span>
-                  <ShieldCheck style={{ width: 13, height: 13, color: '#34d399', flexShrink: 0 }} />
-                </div>
+              {/* Logo — centred, on white */}
+              <div style={{
+                flex: 1,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '8px 0',
+                width: '100%',
+              }}>
+                <Logo />
               </div>
-            );
-          })}
+
+              {/* Partner name + verified tick */}
+              <div style={{
+                width: '100%',
+                paddingTop: '10px',
+                borderTop: '1px solid #f1f5f9',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}>
+                <span style={{ fontSize: '10.5px', fontWeight: 700, color: '#475569' }}>
+                  {name}
+                </span>
+                <CheckCircle2 style={{ width: 13, height: 13, color: '#10b981', flexShrink: 0 }} />
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom trust bar */}
+        {/* Bottom trust strip */}
         <div style={{
-          marginTop: '64px',
-          padding: '28px 40px',
-          borderRadius: '20px',
+          marginTop: '52px',
+          padding: '24px 36px',
+          borderRadius: '18px',
           background: 'var(--bg-surface)',
           border: '1px solid var(--border-color)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
-          gap: '24px',
+          gap: '20px',
         }}>
           <div>
-            <div style={{ fontWeight: 800, fontSize: '1rem', color: 'var(--text-primary)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            <div style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-primary)', fontFamily: "'Plus Jakarta Sans',sans-serif" }}>
               All partners are Websure™ integrated &amp; FSCA compliant
             </div>
-            <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '4px' }}>
-              Direct API connectivity — quote, bind &amp; manage across all partners from a single portal
+            <div style={{ fontSize: '0.825rem', color: 'var(--text-secondary)', marginTop: '3px' }}>
+              Quote, bind &amp; manage across all partners from a single portal
             </div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '32px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '36px', flexWrap: 'wrap' }}>
             {[
-              { val: '10+', label: 'Integrated Partners' },
-              { val: '100%', label: 'FSCA Compliant' },
-              { val: '50+', label: 'API Endpoints' },
-            ].map(stat => (
-              <div key={stat.label} style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--accent)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  {stat.val}
-                </div>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '2px', whiteSpace: 'nowrap' }}>
-                  {stat.label}
-                </div>
+              { val: '10+',  label: 'Integrated Partners' },
+              { val: '100%', label: 'FSCA Compliant'      },
+              { val: '50+',  label: 'API Endpoints'       },
+            ].map(s => (
+              <div key={s.label} style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--accent)', fontFamily: "'Plus Jakarta Sans',sans-serif" }}>{s.val}</div>
+                <div style={{ fontSize: '10px', color: 'var(--text-muted)', marginTop: '2px', whiteSpace: 'nowrap' }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -363,17 +279,13 @@ export const PartnersGrid: React.FC = () => {
 
       </div>
 
-      {/* Responsive grid breakpoints */}
+      {/* Responsive overrides */}
       <style>{`
-        @media (max-width: 1024px) {
-          #partners .partner-logo-grid {
-            grid-template-columns: repeat(3, 1fr) !important;
-          }
+        @media (max-width: 1100px) {
+          #partners > div > div:nth-child(3) { grid-template-columns: repeat(3,1fr) !important; }
         }
-        @media (max-width: 640px) {
-          #partners .partner-logo-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
+        @media (max-width: 680px) {
+          #partners > div > div:nth-child(3) { grid-template-columns: repeat(2,1fr) !important; }
         }
       `}</style>
     </section>
