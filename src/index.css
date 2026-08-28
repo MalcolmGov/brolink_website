@@ -363,7 +363,7 @@ header.brolink-header {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
-  border-radius: 24px;
+  border-radius: 20px;
   box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
 }
@@ -715,6 +715,17 @@ header.brolink-header {
   font-size: 13px;
 }
 
+/* Portfolio Calculator outer card */
+.calculator-outer-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  box-shadow: var(--shadow-lg);
+  padding: 48px;
+}
+
 /* Portfolio Calculator Grid */
 .calculator-grid {
   display: grid;
@@ -777,10 +788,10 @@ header.brolink-header {
 
 .results-panel-card {
   padding: 36px;
-  border-radius: 28px;
+  border-radius: 20px;
   background: linear-gradient(135deg, var(--results-bg-start) 0%, var(--results-bg-end) 100%);
-  border: 1px solid rgba(0, 229, 255, 0.3);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -802,9 +813,9 @@ header.brolink-header {
 
 .metric-box {
   padding: 20px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   gap: 8px;
