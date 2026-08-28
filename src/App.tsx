@@ -8,6 +8,7 @@ import { PartnersGrid } from './components/PartnersGrid';
 import { NewsSection } from './components/NewsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { ChatBot } from './components/ChatBot';
 
 export const App: React.FC = () => {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
@@ -33,6 +34,7 @@ export const App: React.FC = () => {
         <ContactSection />
       </main>
       <Footer />
+      <ChatBot />
     </div>
   );
 };
