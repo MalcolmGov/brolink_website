@@ -110,30 +110,113 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Column Visual Graphic */}
-          <div style={{ position: 'relative' }}>
-            <div className="glass-panel" style={{ padding: '16px', overflow: 'hidden', borderRadius: '28px', border: '1px solid rgba(0, 229, 255, 0.3)' }}>
-              <img 
-                src="/assets/hero_dashboard.jpg" 
-                alt="Brolink Websure Executive Dashboard"
-                style={{ width: '100%', height: 'auto', borderRadius: '20px', display: 'block' }}
-              />
+          {/* Right Column Visual Graphic — full-height cover fill */}
+          <div style={{
+            position: 'relative',
+            borderRadius: '28px',
+            overflow: 'hidden',
+            border: '1px solid rgba(0, 229, 255, 0.3)',
+            boxShadow: '0 32px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0,229,255,0.08)',
+            minHeight: '460px',
+            display: 'flex',
+            alignSelf: 'stretch',
+          }}>
+            {/* Full-bleed dashboard image */}
+            <img
+              src="/assets/hero_dashboard.jpg"
+              alt="Brolink Websure Executive Dashboard"
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center top',
+                display: 'block',
+                borderRadius: '28px',
+              }}
+            />
 
-              {/* Floating Floating Badges */}
-              <div style={{ position: 'absolute', bottom: '32px', left: '32px', padding: '12px 20px', borderRadius: '16px', background: 'rgba(7, 13, 24, 0.95)', border: '1px solid rgba(0, 229, 255, 0.4)', color: '#ffffff', fontSize: '12px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
-                <ShieldCheck style={{ width: 18, height: 18, color: 'var(--accent)' }} />
-                <div>
-                  <div style={{ color: '#ffffff', fontWeight: 800 }}>FSCA & Binder Audit</div>
-                  <div style={{ fontSize: '10px', color: '#34d399' }}>100% Compliant</div>
-                </div>
+            {/* Dark gradient overlay — bottom fade for badge legibility */}
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(to bottom, rgba(7,13,24,0.08) 0%, rgba(7,13,24,0.0) 40%, rgba(7,13,24,0.65) 100%)',
+              borderRadius: '28px',
+              pointerEvents: 'none',
+            }} />
+
+            {/* Top-right floating badge */}
+            <div style={{
+              position: 'absolute',
+              top: '20px',
+              right: '20px',
+              padding: '10px 16px',
+              borderRadius: '14px',
+              background: 'rgba(7, 13, 24, 0.88)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(0, 229, 255, 0.45)',
+              color: '#ffffff',
+              fontSize: '12px',
+              fontWeight: 700,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+            }}>
+              <Activity style={{ width: 16, height: 16, color: 'var(--accent)' }} />
+              <div>
+                <div style={{ color: '#ffffff', fontWeight: 800, lineHeight: 1.2 }}>Websure Engine</div>
+                <div style={{ fontSize: '10px', color: 'var(--accent)', marginTop: '2px' }}>99.98% Uptime</div>
               </div>
+            </div>
 
-              <div style={{ position: 'absolute', top: '32px', right: '32px', padding: '12px 20px', borderRadius: '16px', background: 'rgba(7, 13, 24, 0.95)', border: '1px solid rgba(0, 229, 255, 0.4)', color: '#ffffff', fontSize: '12px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
-                <Activity style={{ width: 18, height: 18, color: 'var(--accent)' }} />
-                <div>
-                  <div style={{ color: '#ffffff', fontWeight: 800 }}>Websure Engine</div>
-                  <div style={{ fontSize: '10px', color: 'var(--accent)' }}>99.98% Uptime</div>
-                </div>
+            {/* Bottom-left floating badge */}
+            <div style={{
+              position: 'absolute',
+              bottom: '20px',
+              left: '20px',
+              padding: '10px 16px',
+              borderRadius: '14px',
+              background: 'rgba(7, 13, 24, 0.88)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(0, 229, 255, 0.45)',
+              color: '#ffffff',
+              fontSize: '12px',
+              fontWeight: 700,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+            }}>
+              <ShieldCheck style={{ width: 16, height: 16, color: '#34d399' }} />
+              <div>
+                <div style={{ color: '#ffffff', fontWeight: 800, lineHeight: 1.2 }}>FSCA &amp; Binder Audit</div>
+                <div style={{ fontSize: '10px', color: '#34d399', marginTop: '2px' }}>100% Compliant</div>
+              </div>
+            </div>
+
+            {/* Bottom-right stat chip */}
+            <div style={{
+              position: 'absolute',
+              bottom: '20px',
+              right: '20px',
+              padding: '10px 16px',
+              borderRadius: '14px',
+              background: 'rgba(7, 13, 24, 0.88)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(52, 211, 153, 0.4)',
+              fontSize: '12px',
+              fontWeight: 700,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+            }}>
+              <Users style={{ width: 15, height: 15, color: '#34d399' }} />
+              <div>
+                <div style={{ color: '#ffffff', fontWeight: 800, lineHeight: 1.2 }}>550,000+</div>
+                <div style={{ fontSize: '10px', color: '#94a3b8', marginTop: '2px' }}>Active Policyholders</div>
               </div>
             </div>
           </div>

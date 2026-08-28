@@ -309,9 +309,9 @@ header.brolink-header {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 58% 38%;
+  grid-template-columns: 52% 44%;
   gap: 48px;
-  align-items: center;
+  align-items: stretch;
 }
 
 @media (max-width: 1024px) {
