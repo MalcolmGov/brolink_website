@@ -45,7 +45,7 @@ export const PortfolioCalculator: React.FC = () => {
             <div className="slider-group">
               <div className="slider-label-row">
                 <label>Active Portfolio Policies</label>
-                <span style={{ fontSize: '1.1rem', fontWeight: 800, color: '#00e5ff' }}>{policiesCount.toLocaleString()} Policies</span>
+                <span className="slider-value">{policiesCount.toLocaleString()} Policies</span>
               </div>
               <input 
                 type="range" 
@@ -67,7 +67,7 @@ export const PortfolioCalculator: React.FC = () => {
             <div className="slider-group">
               <div className="slider-label-row">
                 <label>Average Monthly Premium</label>
-                <span style={{ fontSize: '1.1rem', fontWeight: 800, color: '#00e5ff' }}>{formatZAR(avgPremium)} / mo</span>
+                <span className="slider-value">{formatZAR(avgPremium)} / mo</span>
               </div>
               <input 
                 type="range" 
@@ -89,7 +89,7 @@ export const PortfolioCalculator: React.FC = () => {
             <div className="slider-group">
               <div className="slider-label-row">
                 <label>Weekly Admin & Endorsement Hours</label>
-                <span style={{ fontSize: '1.1rem', fontWeight: 800, color: '#00e5ff' }}>{weeklyAdminHours} Hours / wk</span>
+                <span className="slider-value">{weeklyAdminHours} Hours / wk</span>
               </div>
               <input 
                 type="range" 

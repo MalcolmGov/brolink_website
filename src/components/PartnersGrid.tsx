@@ -65,7 +65,7 @@ export const PartnersGrid: React.FC = () => {
             <div key={idx} className="partner-card">
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <span style={{ fontSize: '10px', fontWeight: 800, padding: '4px 10px', borderRadius: '6px', background: 'rgba(32, 163, 182, 0.15)', color: '#00e5ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span className="partner-badge-pill">
                     {partner.badge}
                   </span>
                   <ShieldCheck style={{ width: 16, height: 16, color: '#20a3b6' }} />
