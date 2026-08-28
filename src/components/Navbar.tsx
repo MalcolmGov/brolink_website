@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sun, Moon, Menu, X, PhoneCall, ChevronRight, Sparkles } from 'lucide-react';
+import { Sun, Moon, Menu, X, PhoneCall, ChevronRight, Sparkles, Play } from 'lucide-react';
 
 interface NavbarProps {
   theme: 'dark' | 'light';
@@ -65,6 +65,53 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
                 <span>012 673 0000</span>
               </a>
 
+              {/* Live Demo CTA */}
+              <a
+                href="https://malcolmgov.github.io/brolink/#websure"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '10px 18px',
+                  borderRadius: '9999px',
+                  background: 'rgba(52, 211, 153, 0.1)',
+                  border: '1px solid rgba(52, 211, 153, 0.35)',
+                  color: '#34d399',
+                  fontWeight: 700,
+                  fontSize: '0.85rem',
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  textDecoration: 'none',
+                  transition: 'all 0.2s ease',
+                  whiteSpace: 'nowrap',
+                }}
+                onMouseEnter={e => {
+                  const el = e.currentTarget as HTMLAnchorElement;
+                  el.style.background = 'rgba(52,211,153,0.2)';
+                  el.style.boxShadow = '0 4px 20px rgba(52,211,153,0.25)';
+                }}
+                onMouseLeave={e => {
+                  const el = e.currentTarget as HTMLAnchorElement;
+                  el.style.background = 'rgba(52,211,153,0.1)';
+                  el.style.boxShadow = 'none';
+                }}
+              >
+                {/* Pulsing live dot */}
+                <span style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '8px', height: '8px' }}>
+                  <span style={{
+                    position: 'absolute',
+                    width: '14px', height: '14px',
+                    borderRadius: '50%',
+                    background: 'rgba(52,211,153,0.35)',
+                    animation: 'pulse-ring 1.5s ease-out infinite',
+                  }} />
+                  <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#34d399', flexShrink: 0 }} />
+                </span>
+                <Play style={{ width: 13, height: 13 }} />
+                <span>Live Demo</span>
+              </a>
+
               <a href="#contact" className="btn-primary" style={{ padding: '10px 22px', fontSize: '0.85rem' }}>
                 <span>Partner With Us</span>
                 <ChevronRight style={{ width: 14, height: 14 }} />
@@ -121,6 +168,28 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               <PhoneCall style={{ width: 16, height: 16, color: '#20a3b6' }} />
               Call +27 (0)12 673 0000
             </a>
+
+            {/* Live Demo — mobile */}
+            <a
+              href="https://malcolmgov.github.io/brolink/#websure"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+                padding: '13px', borderRadius: '12px',
+                border: '1px solid rgba(52,211,153,0.35)',
+                background: 'rgba(52,211,153,0.08)',
+                fontSize: '0.9rem', fontWeight: 800,
+                color: '#34d399', textDecoration: 'none',
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
+              }}
+            >
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#34d399', display: 'inline-block' }} />
+              <Play style={{ width: 14, height: 14 }} />
+              View Live Demo Platform
+            </a>
+
             <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="btn-primary" style={{ textAlign: 'center', width: '100%', justifyContent: 'center' }}>
               <span>Partner With Us</span>
             </a>
