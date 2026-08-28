@@ -118,7 +118,7 @@ export const PortfolioCalculator: React.FC = () => {
           {/* Results Panel */}
           <div className="results-panel-card">
             
-            <div style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#00e5ff' }}>
+            <div style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', color: `var(--accent)` }}>
               Projected Brolink Websure™ Impact
             </div>
 
@@ -127,7 +127,7 @@ export const PortfolioCalculator: React.FC = () => {
               {/* Metric 1 */}
               <div className="metric-box">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.75rem', color: '#94a3b8' }}>
-                  <Clock style={{ width: 16, height: 16, color: '#00e5ff' }} />
+                  <Clock style={{ width: 16, height: 16, color: `var(--accent)` }} />
                   <span>Annual Hours Saved</span>
                 </div>
                 <div style={{ fontSize: '1.875rem', fontWeight: 800, color: '#ffffff' }}>
@@ -141,7 +141,7 @@ export const PortfolioCalculator: React.FC = () => {
               {/* Metric 2 */}
               <div className="metric-box">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.75rem', color: '#94a3b8' }}>
-                  <TrendingUp style={{ width: 16, height: 16, color: '#00e5ff' }} />
+                  <TrendingUp style={{ width: 16, height: 16, color: `var(--accent)` }} />
                   <span>Est. Cost Reduction</span>
                 </div>
                 <div style={{ fontSize: '1.875rem', fontWeight: 800, color: '#ffffff' }}>
@@ -154,9 +154,9 @@ export const PortfolioCalculator: React.FC = () => {
 
             </div>
 
-            <div style={{ padding: '16px', borderRadius: '16px', background: 'rgba(0, 229, 255, 0.1)', border: '1px solid rgba(0, 229, 255, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+            <div style={{ padding: '16px', borderRadius: '16px', background: 'rgba(0, 229, 255, 0.1)', border: '1px solid var(--accent-border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.85rem' }}>
               <span style={{ fontWeight: 600, color: '#e2e8f0' }}>Claims & Endorsement Turnaround</span>
-              <span style={{ fontWeight: 800, color: '#00e5ff' }}>+{claimsTurnaroundSpeedGain}% Faster</span>
+              <span style={{ fontWeight: 800, color: `var(--accent)` }}>+{claimsTurnaroundSpeedGain}% Faster</span>
             </div>
 
             <a href="#contact" className="btn-primary" style={{ textAlign: 'center', width: '100%', justifyContent: 'center', padding: '16px' }}>

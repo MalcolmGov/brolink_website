@@ -20,12 +20,12 @@ export const Footer: React.FC = () => {
                   <span style={{ fontWeight: 600, color: '#f8fafc' }}>
                     BRO
                   </span>
-                  <span style={{ fontWeight: 800, color: '#00e5ff', marginLeft: '1px' }}>
+                  <span style={{ fontWeight: 800, color: 'var(--accent)', marginLeft: '1px' }}>
                     LINK
                   </span>
                 </span>
                 
-                <span style={{ fontSize: '9px', fontWeight: 800, letterSpacing: '0.08em', padding: '2px 7px', borderRadius: '4px', background: 'rgba(32, 163, 182, 0.2)', color: '#00e5ff', border: '1px solid rgba(0, 229, 255, 0.3)', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+                <span style={{ fontSize: '9px', fontWeight: 800, letterSpacing: '0.08em', padding: '2px 7px', borderRadius: '4px', background: 'rgba(32, 163, 182, 0.2)', color: 'var(--accent)', border: '1px solid rgba(0, 229, 255, 0.3)', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
                   FSP 10834
                 </span>
               </div>
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
             </p>
 
             <div style={{ paddingTop: '8px' }}>
-              <a href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 18px', borderRadius: '12px', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', fontSize: '0.825rem', fontWeight: 600, color: '#00e5ff', textDecoration: 'none' }}>
+              <a href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 18px', borderRadius: '12px', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', fontSize: '0.825rem', fontWeight: 600, color: 'var(--accent)', textDecoration: 'none' }}>
                 <Download style={{ width: 16, height: 16 }} />
                 <span>Broker Downloads & Compliance Packs</span>
               </a>
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
               <li>
                 <a href="#websure" style={{ color: '#94a3b8', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
                   <span>Websure™ Tech Platform</span>
-                  <ArrowUpRight style={{ width: 14, height: 14, color: '#00e5ff' }} />
+                  <ArrowUpRight style={{ width: 14, height: 14, color: 'var(--accent)' }} />
                 </a>
               </li>
               <li>
@@ -98,7 +98,7 @@ export const Footer: React.FC = () => {
                 Westend Office Park, 254 Hall Street, Centurion, 0157, Gauteng, South Africa
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingTop: '8px', borderTop: '1px solid rgba(255, 255, 255, 0.08)', fontSize: '0.8rem' }}>
-                <a href="tel:+27126730000" style={{ color: '#00e5ff', fontWeight: 700, textDecoration: 'none' }}>
+                <a href="tel:+27126730000" style={{ color: 'var(--accent)', fontWeight: 700, textDecoration: 'none' }}>
                   +27 (0)12 673 0000
                 </a>
                 <span style={{ color: '#475569' }}>•</span>

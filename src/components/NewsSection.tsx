@@ -96,7 +96,7 @@ export const NewsSection: React.FC = () => {
             >
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem' }}>
-                  <span style={{ fontSize: '10px', fontWeight: 800, padding: '4px 10px', borderRadius: '6px', background: 'rgba(32, 163, 182, 0.15)', color: '#00e5ff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ fontSize: '10px', fontWeight: 800, padding: '4px 10px', borderRadius: '6px', background: 'rgba(32, 163, 182, 0.15)', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     {art.category}
                   </span>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 600, color: 'var(--text-secondary)' }}>
@@ -114,7 +114,7 @@ export const NewsSection: React.FC = () => {
                 </p>
               </div>
 
-              <div style={{ paddingTop: '20px', marginTop: '24px', borderTop: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem', fontWeight: 700, color: '#00e5ff' }}>
+              <div style={{ paddingTop: '20px', marginTop: '24px', borderTop: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent)' }}>
                 <span>{art.readTime}</span>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                   Read Article

@@ -57,7 +57,7 @@ export const WebsureShowcase: React.FC = () => {
         {/* Section Header */}
         <div className="section-header">
           <div className="badge-pill">
-            <Cpu style={{ width: 16, height: 16, color: '#00e5ff' }} />
+            <Cpu style={{ width: 16, height: 16, color: 'var(--accent)' }} />
             <span>Proprietary Technology</span>
           </div>
           <h2 className="section-title">
@@ -82,7 +82,7 @@ export const WebsureShowcase: React.FC = () => {
                   className={`module-card ${isSelected ? 'selected' : ''}`}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '11px', fontWeight: 800, padding: '4px 10px', borderRadius: '6px', background: isSelected ? 'rgba(0, 229, 255, 0.2)' : 'var(--bg-primary)', color: isSelected ? '#00e5ff' : 'var(--text-muted)' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, padding: '4px 10px', borderRadius: '6px', background: isSelected ? 'rgba(0, 229, 255, 0.2)' : 'var(--bg-primary)', color: isSelected ? 'var(--accent)' : 'var(--text-muted)' }}>
                       {mod.badge}
                     </span>
                     <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--brand-teal)' }}>
@@ -114,7 +114,7 @@ export const WebsureShowcase: React.FC = () => {
                   websure.brolink.co.za/portal/v4
                 </span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 700, color: '#00e5ff' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 700, color: 'var(--accent)' }}>
                 <Lock style={{ width: 14, height: 14 }} />
                 <span>256-Bit Encrypted</span>
               </div>
@@ -129,7 +129,7 @@ export const WebsureShowcase: React.FC = () => {
               />
               
               <div style={{ position: 'absolute', top: '16px', right: '16px', padding: '8px 16px', borderRadius: '12px', background: 'rgba(7, 13, 24, 0.95)', border: '1px solid rgba(0, 229, 255, 0.4)', color: '#ffffff', fontSize: '12px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Activity style={{ width: 16, height: 16, color: '#00e5ff' }} />
+                <Activity style={{ width: 16, height: 16, color: 'var(--accent)' }} />
                 <span>Module: {platformModules[activeStep].title}</span>
               </div>
             </div>
@@ -174,7 +174,7 @@ export const WebsureShowcase: React.FC = () => {
                       <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>{pol.id} • {pol.type}</div>
                     </div>
                     <div style={{ textAlign: 'right' }}>
-                      <div style={{ fontWeight: 800, color: '#00e5ff' }}>{pol.premium}</div>
+                      <div style={{ fontWeight: 800, color: 'var(--accent)' }}>{pol.premium}</div>
                       <span style={{ fontSize: '10px', fontWeight: 700, padding: '2px 8px', borderRadius: '4px', background: pol.status === 'Active' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(245, 158, 11, 0.2)', color: pol.status === 'Active' ? '#34d399' : '#fbbf24', marginTop: '2px', display: 'inline-block' }}>
                         {pol.status}
                       </span>

@@ -22,12 +22,12 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
                   <span style={{ fontWeight: 600, color: theme === 'dark' ? '#f8fafc' : '#334155' }}>
                     BRO
                   </span>
-                  <span style={{ fontWeight: 800, color: theme === 'dark' ? '#00e5ff' : '#0077b6', marginLeft: '1px' }}>
+                  <span style={{ fontWeight: 800, color: theme === 'dark' ? `var(--accent)` : '#0077b6', marginLeft: '1px' }}>
                     LINK
                   </span>
                 </span>
                 
-                <span style={{ fontSize: '9px', fontWeight: 800, letterSpacing: '0.08em', padding: '2px 7px', borderRadius: '4px', background: 'rgba(32, 163, 182, 0.2)', color: '#00e5ff', border: '1px solid rgba(0, 229, 255, 0.3)', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+                <span style={{ fontSize: '9px', fontWeight: 800, letterSpacing: '0.08em', padding: '2px 7px', borderRadius: '4px', background: 'rgba(32, 163, 182, 0.2)', color: `var(--accent)`, border: '1px solid var(--accent-border)', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
                   FSP 10834
                 </span>
               </div>
@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               <li><a href="#services" className="nav-link">Services</a></li>
               <li>
                 <a href="#websure" className="nav-link" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                  <Sparkles style={{ width: 14, height: 14, color: '#00e5ff' }} />
+                  <Sparkles style={{ width: 14, height: 14, color: `var(--accent)` }} />
                   <span>Websure™</span>
                 </a>
               </li>
@@ -100,7 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
           <a href="#services" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)' }}>
             Services & Solutions
           </a>
-          <a href="#websure" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 700, color: '#00e5ff' }}>
+          <a href="#websure" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 700, color: `var(--accent)` }}>
             Websure™ Insurance Platform
           </a>
           <a href="#calculator" onClick={() => setMobileMenuOpen(false)} style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)' }}>

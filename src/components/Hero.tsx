@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
             
             {/* Top Pill Badge */}
             <div className="badge-pill">
-              <ShieldCheck style={{ width: 16, height: 16, color: '#00e5ff' }} />
+              <ShieldCheck style={{ width: 16, height: 16, color: 'var(--accent)' }} />
               <span>Brolink 2030 Strategy • Websure™ NextGen Admin</span>
             </div>
 
@@ -83,7 +83,7 @@ export const Hero: React.FC = () => {
                     <span style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text-primary)' }}>
                       {personaDetails[activePersona].title}
                     </span>
-                    <span style={{ fontSize: '10px', fontWeight: 800, padding: '2px 8px', borderRadius: '4px', background: 'rgba(32, 163, 182, 0.2)', color: '#00e5ff', textTransform: 'uppercase' }}>
+                    <span style={{ fontSize: '10px', fontWeight: 800, padding: '2px 8px', borderRadius: '4px', background: 'rgba(32, 163, 182, 0.2)', color: 'var(--accent)', textTransform: 'uppercase' }}>
                       {personaDetails[activePersona].badge}
                     </span>
                   </div>
@@ -121,7 +121,7 @@ export const Hero: React.FC = () => {
 
               {/* Floating Floating Badges */}
               <div style={{ position: 'absolute', bottom: '32px', left: '32px', padding: '12px 20px', borderRadius: '16px', background: 'rgba(7, 13, 24, 0.95)', border: '1px solid rgba(0, 229, 255, 0.4)', color: '#ffffff', fontSize: '12px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
-                <ShieldCheck style={{ width: 18, height: 18, color: '#00e5ff' }} />
+                <ShieldCheck style={{ width: 18, height: 18, color: 'var(--accent)' }} />
                 <div>
                   <div style={{ color: '#ffffff', fontWeight: 800 }}>FSCA & Binder Audit</div>
                   <div style={{ fontSize: '10px', color: '#34d399' }}>100% Compliant</div>
@@ -129,10 +129,10 @@ export const Hero: React.FC = () => {
               </div>
 
               <div style={{ position: 'absolute', top: '32px', right: '32px', padding: '12px 20px', borderRadius: '16px', background: 'rgba(7, 13, 24, 0.95)', border: '1px solid rgba(0, 229, 255, 0.4)', color: '#ffffff', fontSize: '12px', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
-                <Activity style={{ width: 18, height: 18, color: '#00e5ff' }} />
+                <Activity style={{ width: 18, height: 18, color: 'var(--accent)' }} />
                 <div>
                   <div style={{ color: '#ffffff', fontWeight: 800 }}>Websure Engine</div>
-                  <div style={{ fontSize: '10px', color: '#00e5ff' }}>99.98% Uptime</div>
+                  <div style={{ fontSize: '10px', color: 'var(--accent)' }}>99.98% Uptime</div>
                 </div>
               </div>
             </div>
