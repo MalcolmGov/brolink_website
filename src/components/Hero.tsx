@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ShieldCheck, ArrowRight, Calculator, Cpu, Award, Activity, Users, Building } from 'lucide-react';
+import { RiskProfilerTrigger } from './RiskProfiler';
 
 export const Hero: React.FC = () => {
   const [activePersona, setActivePersona] = useState<'insurer' | 'broker' | 'policyholder'>('broker');
@@ -94,7 +95,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Action CTAs */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
               <a href="#websure" className="btn-primary">
                 <Cpu style={{ width: 16, height: 16 }} />
                 <span>Explore Websure™ Platform</span>
@@ -105,6 +106,8 @@ export const Hero: React.FC = () => {
                 <Calculator style={{ width: 16, height: 16 }} />
                 <span>Calculate ROI</span>
               </a>
+
+              <RiskProfilerTrigger />
             </div>
 
           </div>
