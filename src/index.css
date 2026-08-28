@@ -311,7 +311,7 @@ header.brolink-header {
   display: grid;
   grid-template-columns: 52% 44%;
   gap: 48px;
-  align-items: stretch;
+  align-items: center;
 }
 
 @media (max-width: 1024px) {

@@ -39,8 +39,7 @@ export const Hero: React.FC = () => {
 
             {/* Headline */}
             <h1 className="hero-title">
-              Your Trusted Insurance & <br />
-              <span className="text-gradient">Portfolio Connection.</span>
+              Your Trusted Insurance &amp; <span className="text-gradient">Portfolio Connection.</span>
             </h1>
 
             {/* Subtitle */}
@@ -110,113 +109,135 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Column Visual Graphic — full-height cover fill */}
+          {/* Right Column — dashboard screenshot card */}
           <div style={{
             position: 'relative',
-            borderRadius: '28px',
-            overflow: 'hidden',
-            border: '1px solid rgba(0, 229, 255, 0.3)',
-            boxShadow: '0 32px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0,229,255,0.08)',
-            minHeight: '460px',
             display: 'flex',
-            alignSelf: 'stretch',
+            flexDirection: 'column',
+            justifyContent: 'center',
           }}>
-            {/* Full-bleed dashboard image */}
-            <img
-              src="/assets/hero_dashboard.jpg"
-              alt="Brolink Websure Executive Dashboard"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                objectPosition: 'center top',
-                display: 'block',
-                borderRadius: '28px',
-              }}
-            />
-
-            {/* Dark gradient overlay — bottom fade for badge legibility */}
+            {/* Glow halo behind card */}
             <div style={{
               position: 'absolute',
-              inset: 0,
-              background: 'linear-gradient(to bottom, rgba(7,13,24,0.08) 0%, rgba(7,13,24,0.0) 40%, rgba(7,13,24,0.65) 100%)',
-              borderRadius: '28px',
+              top: '10%',
+              left: '5%',
+              right: '5%',
+              bottom: '10%',
+              background: 'radial-gradient(ellipse at center, rgba(0,229,255,0.18) 0%, transparent 70%)',
               pointerEvents: 'none',
+              zIndex: 0,
             }} />
 
-            {/* Top-right floating badge */}
+            {/* Card wrapper */}
             <div style={{
-              position: 'absolute',
-              top: '20px',
-              right: '20px',
-              padding: '10px 16px',
-              borderRadius: '14px',
-              background: 'rgba(7, 13, 24, 0.88)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(0, 229, 255, 0.45)',
-              color: '#ffffff',
-              fontSize: '12px',
-              fontWeight: 700,
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+              position: 'relative',
+              zIndex: 1,
+              borderRadius: '24px',
+              overflow: 'hidden',
+              border: '1px solid rgba(0, 229, 255, 0.28)',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,229,255,0.06)',
+              background: '#070d18',
             }}>
-              <Activity style={{ width: 16, height: 16, color: 'var(--accent)' }} />
-              <div>
-                <div style={{ color: '#ffffff', fontWeight: 800, lineHeight: 1.2 }}>Websure Engine</div>
-                <div style={{ fontSize: '10px', color: 'var(--accent)', marginTop: '2px' }}>99.98% Uptime</div>
+              {/* Top chrome bar */}
+              <div style={{
+                padding: '10px 16px',
+                background: '#0a192f',
+                borderBottom: '1px solid rgba(255,255,255,0.07)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+              }}>
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#ef4444', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#f59e0b', display: 'inline-block' }} />
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#10b981', display: 'inline-block' }} />
+                <span style={{ flex: 1, textAlign: 'center', fontSize: '11px', fontFamily: 'monospace', color: '#475569' }}>
+                  websure.brolink.co.za/dashboard
+                </span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '10px', fontWeight: 700, color: '#34d399' }}>
+                  <Activity style={{ width: 12, height: 12 }} />
+                  <span>LIVE</span>
+                </div>
               </div>
-            </div>
 
-            {/* Bottom-left floating badge */}
-            <div style={{
-              position: 'absolute',
-              bottom: '20px',
-              left: '20px',
-              padding: '10px 16px',
-              borderRadius: '14px',
-              background: 'rgba(7, 13, 24, 0.88)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(0, 229, 255, 0.45)',
-              color: '#ffffff',
-              fontSize: '12px',
-              fontWeight: 700,
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-            }}>
-              <ShieldCheck style={{ width: 16, height: 16, color: '#34d399' }} />
-              <div>
-                <div style={{ color: '#ffffff', fontWeight: 800, lineHeight: 1.2 }}>FSCA &amp; Binder Audit</div>
-                <div style={{ fontSize: '10px', color: '#34d399', marginTop: '2px' }}>100% Compliant</div>
+              {/* Dashboard screenshot */}
+              <div style={{ position: 'relative' }}>
+                <img
+                  src="/assets/hero_dashboard.jpg"
+                  alt="Brolink Websure Executive Dashboard"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                    maxHeight: '340px',
+                    objectFit: 'cover',
+                    objectPosition: 'left top',
+                  }}
+                />
+
+                {/* Floating badge — top right of image */}
+                <div style={{
+                  position: 'absolute',
+                  top: '12px',
+                  right: '12px',
+                  padding: '8px 14px',
+                  borderRadius: '12px',
+                  background: 'rgba(7,13,24,0.92)',
+                  backdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(0,229,255,0.4)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '7px',
+                  boxShadow: '0 6px 20px rgba(0,0,0,0.5)',
+                }}>
+                  <Activity style={{ width: 14, height: 14, color: '#00e5ff' }} />
+                  <div>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#fff', lineHeight: 1.2 }}>Websure Engine</div>
+                    <div style={{ fontSize: '10px', color: '#00e5ff', marginTop: '1px' }}>99.98% Uptime</div>
+                  </div>
+                </div>
+
+                {/* Floating badge — bottom left of image */}
+                <div style={{
+                  position: 'absolute',
+                  bottom: '12px',
+                  left: '12px',
+                  padding: '8px 14px',
+                  borderRadius: '12px',
+                  background: 'rgba(7,13,24,0.92)',
+                  backdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(52,211,153,0.4)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '7px',
+                  boxShadow: '0 6px 20px rgba(0,0,0,0.5)',
+                }}>
+                  <ShieldCheck style={{ width: 14, height: 14, color: '#34d399' }} />
+                  <div>
+                    <div style={{ fontSize: '11px', fontWeight: 800, color: '#fff', lineHeight: 1.2 }}>FSCA &amp; Binder Audit</div>
+                    <div style={{ fontSize: '10px', color: '#34d399', marginTop: '1px' }}>100% Compliant</div>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            {/* Bottom-right stat chip */}
-            <div style={{
-              position: 'absolute',
-              bottom: '20px',
-              right: '20px',
-              padding: '10px 16px',
-              borderRadius: '14px',
-              background: 'rgba(7, 13, 24, 0.88)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(52, 211, 153, 0.4)',
-              fontSize: '12px',
-              fontWeight: 700,
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-            }}>
-              <Users style={{ width: 15, height: 15, color: '#34d399' }} />
-              <div>
-                <div style={{ color: '#ffffff', fontWeight: 800, lineHeight: 1.2 }}>550,000+</div>
-                <div style={{ fontSize: '10px', color: '#94a3b8', marginTop: '2px' }}>Active Policyholders</div>
+              {/* Bottom stats strip */}
+              <div style={{
+                padding: '14px 20px',
+                background: '#0a192f',
+                borderTop: '1px solid rgba(255,255,255,0.07)',
+                display: 'flex',
+                justifyContent: 'space-around',
+                gap: '12px',
+              }}>
+                {[
+                  { label: 'Premiums Administered', value: 'R15.4B+' },
+                  { label: 'Active Policyholders', value: '550K+' },
+                  { label: 'Broker Partners', value: '1,200+' },
+                ].map(s => (
+                  <div key={s.label} style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '14px', fontWeight: 800, color: '#00e5ff', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{s.value}</div>
+                    <div style={{ fontSize: '10px', color: '#64748b', marginTop: '2px', whiteSpace: 'nowrap' }}>{s.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
