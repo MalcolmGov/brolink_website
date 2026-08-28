@@ -303,15 +303,15 @@ header.brolink-header {
 
 /* Hero Section */
 .hero-section {
-  padding-top: 170px;
-  padding-bottom: 100px;
+  padding-top: 120px;
+  padding-bottom: 80px;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 52% 44%;
   gap: 48px;
-  align-items: center;
+  align-items: start;
 }
 
 @media (max-width: 1024px) {

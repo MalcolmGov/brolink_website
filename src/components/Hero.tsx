@@ -114,7 +114,8 @@ export const Hero: React.FC = () => {
             position: 'relative',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
+            paddingTop: '8px',
           }}>
             {/* Glow halo behind card */}
             <div style={{
