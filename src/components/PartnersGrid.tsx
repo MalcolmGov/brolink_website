@@ -112,7 +112,7 @@ export const PartnersGrid: React.FC = () => {
   const filtered = filter === 'all' ? PARTNERS : PARTNERS.filter(p => p.category === filter);
 
   return (
-    <section id="partners" style={{ padding: '100px 0' }}>
+    <section id="partners" style={{ padding: '100px 0', background: 'var(--bg-secondary)' }}>
       <div className="container">
 
         {/* Header */}
@@ -157,11 +157,7 @@ export const PartnersGrid: React.FC = () => {
         </div>
 
         {/* Logo cards — white bg so all brand colours pop */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(5, 1fr)',
-          gap: '16px',
-        }}>
+        <div className="partners-grid">
           {filtered.map(({ name, badge, Logo }) => (
             <div
               key={name}
@@ -171,14 +167,14 @@ export const PartnersGrid: React.FC = () => {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                padding: '20px 16px 14px',
+                padding: '24px 16px 16px',
                 borderRadius: '16px',
                 /* White card — logos always readable */
                 background: '#ffffff',
                 border: '1px solid #e2e8f0',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                 transition: 'all 0.25s ease',
-                minHeight: '110px',
+                minHeight: '130px',
                 overflow: 'hidden',
               }}
               onMouseEnter={e => {
@@ -282,10 +278,13 @@ export const PartnersGrid: React.FC = () => {
       {/* Responsive overrides */}
       <style>{`
         @media (max-width: 1100px) {
-          #partners > div > div:nth-child(3) { grid-template-columns: repeat(3,1fr) !important; }
+          .partners-grid { grid-template-columns: repeat(3,1fr) !important; }
         }
         @media (max-width: 680px) {
-          #partners > div > div:nth-child(3) { grid-template-columns: repeat(2,1fr) !important; }
+          .partners-grid { grid-template-columns: repeat(2,1fr) !important; }
+        }
+        @media (max-width: 400px) {
+          .partners-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>
